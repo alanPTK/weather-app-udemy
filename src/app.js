@@ -42,6 +42,15 @@ app.get('/help', (req, res) => {
     })
 })
 
+app.get('/faustao', (req, res) => {
+    res.render('fausto', {
+        title: 'Faustão',
+        name: 'Alan',
+        message: 'Do you need help ?'
+    })
+})
+
+
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
